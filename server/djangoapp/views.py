@@ -16,6 +16,7 @@ logger = logging.getLogger(__name__)
 
 # Create your views here.
 
+
 # Create a `login_request` view to handle sign in request
 @csrf_exempt
 def login_user(request):
@@ -72,7 +73,7 @@ def registration(request):
         login(request, user)
         data = {"userName": username, "status": "Authenticated"}
         return JsonResponse(data)
-    else :
+    else:
         data = {"userName": username, "error": "Already Registered"}
         return JsonResponse(data)
 
@@ -119,7 +120,7 @@ def add_review(request):
     if not request.user.is_anonymous:
         data = json.loads(request.body)
         try:
-            response = post_review(data)
+            post_review(data)
             return JsonResponse({"status": 200})
         except Exception as e:
             return JsonResponse({"status": 401,
