@@ -5,23 +5,23 @@ def initiate():
     print("Populate not implemented. Add data manually")
     car_make_data = [
       {
-        "name": "NISSAN", 
-        "description": "Great cars. Japanese technology"
+      "name": "NISSAN",
+      "description": "Great cars. Japanese technology"
       },
       {
-        "name": "Mercedes", 
+        "name": "Mercedes",
         "description": "Great cars. German technology"
       },
       {
-        "name": "Audi", 
+        "name": "Audi",
         "description": "Great cars. German technology"
       },
       {
-        "name": "Kia", 
+        "name": "Kia",
         "description": "Great cars. Korean technology"
       },
       {
-        "name": "Toyota", 
+        "name": "Toyota",
         "description": "Great cars. Japanese technology"
       },
     ]
@@ -35,14 +35,14 @@ def initiate():
     car_model_data = [
       {
         "name": "Pathfinder",
-        "type": "SUV", 
+        "type": "SUV",
         "year": 2023,
         "car_make": car_make_instances[0]
       },
       {
         "name": "Qashqai",
         "type": "SUV",
-        "year": 2023, 
+        "year": 2023,
         "car_make": car_make_instances[0]
       },
       {
@@ -54,25 +54,25 @@ def initiate():
       {
         "name": "A-Class",
         "type": "SUV",
-        "year": 2023, 
+        "year": 2023,
         "car_make": car_make_instances[1]
       },
       {
         "name": "C-Class",
         "type": "SUV",
-        "year": 2023, 
+        "year": 2023,
         "car_make": car_make_instances[1]
       },
       {
-        "name": "E-Class", 
+        "name": "E-Class",
         "type": "SUV",
         "year": 2023,
         "car_make": car_make_instances[1]
       },
       {
-        "name": "A4", 
+        "name": "A4",
         "type": "SUV",
-        "year": 2023, 
+        "year": 2023,
         "car_make": car_make_instances[2]
       },
       {
@@ -84,25 +84,25 @@ def initiate():
       {
         "name": "A6",
         "type": "SUV",
-        "year": 2023, 
+        "year": 2023,
         "car_make": car_make_instances[2]
       },
       {
         "name": "Sorrento",
         "type": "SUV",
-        "year": 2023, 
+        "year": 2023,
         "car_make": car_make_instances[3]
       },
       {
-        "name": "Carnival", 
+        "name": "Carnival",
         "type": "SUV",
         "year": 2023,
         "car_make": car_make_instances[3]
       },
       {
         "name": "Cerato",
-        "type": "Sedan", 
-        "year": 2023, 
+        "type": "Sedan",
+        "year": 2023,
         "car_make": car_make_instances[3]
       },
       {
@@ -112,9 +112,9 @@ def initiate():
         "car_make": car_make_instances[4]
       },
       {
-        "name": "Camry", 
-        "type": "Sedan", 
-        "year": 2023, 
+        "name": "Camry",
+        "type": "Sedan",
+        "year": 2023,
         "car_make": car_make_instances[4]
       },
       {

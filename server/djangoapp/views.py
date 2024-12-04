@@ -33,7 +33,7 @@ def login_user(request):
     # Try to check if provide credential can be authenticated
     user = authenticate(username=username, password=password)
     data = {"userName": username}
-    if user is not None: 
+    if user is not None:
         # If user is valid, call login method to login current user
         login(request, user)
         data = {"userName": username, "status": "Authenticated"}
@@ -59,11 +59,11 @@ def registration(request):
     email = data['email']
     username_exist = False
     email_exist = False
-    try: 
+    try:
         # Check if user already exists
         User.objects.get(username=username)
         username_exist = True
-    except: 
+    except:
         # If not, simply log this is a new user
         logger.debug("{} is new user".format(username))
 
@@ -75,7 +75,7 @@ def registration(request):
         login(request, user)
         data = {"userName": username, "status": "Authenticated"}
         return JsonResponse(data)
-    else : 
+    else :
         data = {"userName": username, "error": "Already Registered"}
         return JsonResponse(data)
 
@@ -93,7 +93,7 @@ def get_dealerships(request, state="All"):
 # Create a `get_dealer_reviews` view to render the reviews of a dealer
 def get_dealer_reviews(request, dealer_id):
     # if dealer id has been provided
-    if dealer_id: 
+    if dealer_id:
         endpoint = "/fetchReviews/dealer/"+str(dealer_id)
         reviews = get_request(endpoint)
         for review_detail in reviews: 
@@ -101,13 +101,13 @@ def get_dealer_reviews(request, dealer_id):
             print(response)
             review_detail['sentiment'] = response['sentiment']
         return JsonResponse({"status": 200, "reviews": reviews})
-    else: 
+    else:
         return JsonResponse({"status": 400, "message": "Bad Request"})
 
 
 # Create a `get_dealer_details` view to render the dealer details
 def get_dealer_details(request, dealer_id):
-    if dealer_id: 
+    if dealer_id:
         endpoint = "/fetchDealer/"+str(dealer_id)
         dealership = get_request(endpoint)
         return JsonResponse({"status": 200, "dealer": dealership})
@@ -131,7 +131,7 @@ def add_review(request):
 def get_cars(request):
     count = CarMake.objects.filter().count()
     print(count)
-    if count == 0: 
+    if count == 0:
         initiate()
     car_models = CarModel.objects.select_related('car_make')
     cars = []
