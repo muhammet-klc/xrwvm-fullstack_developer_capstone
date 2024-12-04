@@ -1,5 +1,3 @@
-/*jshint esversion: 8 */
-
 import LoginPanel from "./components/Login/Login"
 import RegisterPanel from "./components/Register/Register"
 import Dealers from './components/Dealers/Dealers'
